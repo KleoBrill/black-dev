@@ -7,12 +7,36 @@
 	> header {
 		height: 50px;
 		background: black;
+		overflow: hidden;
+		> .discount {
+
+		}
+		> ul.tapes {
+			list-style: none;
+			> li {
+				display: block;
+				width: 100%;
+				background: url('../images/tape.png') repeat-x 0 0;
+			}
+		}
 	}
 	> .top-wrap {
-		background: url('images/background.png') no-repeat 0 0;
+		position: relative;
+		background: rgba(0, 0, 0, .85);
 		height: 1028px;
+		&:before {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: url('../images/background.png') no-repeat 0 0;
+			background-size: cover;
+			z-index: -1;
+		}
 		> .inner {
-			height: 700px;
 			width: 960px;
 			margin: 0 auto;
 			> .text {
@@ -21,10 +45,10 @@
 				text-align: center;
 				margin: 0 auto;
 				padding-top: 12px;
+				font-family: 'Muller-ExtraBold-DEMO', sans-serif;
 				> .text-one {
 					color: #FFD600;
 					font-size: 33px;
-					font-family: Muller-ExtraBold-DEMO;
 				}
 				> .text-two {
 					font-size: 40px;
@@ -32,19 +56,16 @@
 					line-height: normal;
 					color: white;
 					text-transform: uppercase;
-					font-family: 'Muller-ExtraBold-DEMO';
 				}
 				> .text-three {
 					color: #FFD600;
 					font-size: 18px;
-					font-family: 'Muller-ExtraBold-DEMO';
 				}
 			}
 			> .sale {
 				width: 446px;
 				border: 5px solid #FFD600;
 				margin: 0 auto;
-				font-family: 'Muller-ExtraBold-DEMO';
 				line-height: normal;
 				font-size: 30px;
 				text-align: center;
@@ -56,7 +77,7 @@
 			> .description {
 				width: 850px;
 				height: 150px;
-				padding: 13px 10px 0px 10px;
+				padding: 13px 10px 0 10px;
 				margin: 20px 55px 0 55px;
 				border: 1px solid #FFFFFF;
 				box-sizing: border-box;
@@ -78,23 +99,23 @@
 					flex:1;
 					font-family: 'Roboto-Medium';
 						> .image-1 {
-							background: url('images/item-1.png') no-repeat 54px 0;
+							background: url('../images/item-1.png') no-repeat 54px 0;
 							height: 130px;
 						}
 						> .image-2 {
-							background: url('images/item-2.png') no-repeat 40px 0;
+							background: url('../images/item-2.png') no-repeat 40px 0;
 							height: 130px;
 						}
 						> .image-3 {
-							background: url('images/item-3.png') no-repeat 43px 27px;
+							background: url('../images/item-3.png') no-repeat 43px 27px;
 							height: 130px;
 						}
 						> .image-4 {
-							background: url('images/item-4.png') no-repeat 46px 14px;
+							background: url('../images/item-4.png') no-repeat 46px 14px;
 							height: 130px;
 						}
 						> .image-5 {
-							background: url('images/item-5.png') no-repeat 58px 0;
+							background: url('../images/item-5.png') no-repeat 58px 0;
 							height: 130px;
 						}
 					> .name {
@@ -123,19 +144,19 @@
 					list-style: none;
 					flex:1;
 						> .image-6 {
-							background: url('images/item-6.png') no-repeat 25px 0;
+							background: url('../images/item-6.png') no-repeat 25px 0;
 							height: 130px;
 						}
 						> .image-7 {
-							background: url('images/item-7.png') no-repeat 40px 0;
+							background: url('../images/item-7.png') no-repeat 40px 0;
 							height: 130px;
 						}
 						> .image-8 {
-							background: url('images/item-8.png') no-repeat 21px 14px;
+							background: url('../images/item-8.png') no-repeat 21px 14px;
 							height: 130px;
 						}
 						> .image-9 {
-							background: url('images/item-9.png') no-repeat 46px 0;
+							background: url('../images/item-9.png') no-repeat 46px 0;
 							height: 130px;
 						}
 
@@ -173,26 +194,26 @@
 				> .left {
 					padding-left: 60px;
 					flex: 1;
-					background: url('images/box.png') no-repeat 0 0;
+					background: url('../images/box.png') no-repeat 0 0;
 					padding-right: 54px;
 				}
 				> .center {
 					padding-left: 60px;
 					flex: 1;
-					background: url('images/badge.png') no-repeat 0 0;
+					background: url('../images/badge.png') no-repeat 0 0;
 					padding-right: 54px;
 				}
 				> .right {
 					padding-left: 60px;
 					flex: 1;
-					background: url('images/conversation.png') no-repeat 0 0;
+					background: url('../images/conversation.png') no-repeat 0 0;
 
 				}
 			}
 		}
 	}
 	> .description-wrap {
-		background: url('images/background-1.png') no-repeat 0 0;
+		background: url('../images/background-1.png') no-repeat 0 0;
 		padding-bottom: 100px;
 		padding-top: 20px;
 		position: relative;
@@ -231,7 +252,7 @@
 					flex-grow: 1;
 					> .main-image {
 						margin: 33px auto 0 auto;
-						background: url('images/main1.png') no-repeat 0 0;
+						background: url('../images/main1.png') no-repeat 0 0;
 
 						height: 323px;
 					    background-size: contain;
@@ -241,7 +262,7 @@
 					display: block;
 					content: '-53%';
 					transform: rotate(45);
-					background: url('images/rectangle.png') no-repeat 0 0;
+					background: url('../images/rectangle.png') no-repeat 0 0;
 					font-family:'Muller-ExtraBold-DEMO';
 					position: absolute;
 					height: 175px;
@@ -253,7 +274,7 @@
 						display: flex;
 						margin: 30px 41px 0 41px;
 						> .image-1 {
-							background: url('images/img1.png') no-repeat 0 0;
+							background: url('../images/img1.png') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: cover;
@@ -261,7 +282,7 @@
 							border-radius: 5px;
 						}
 						> .image-2 {
-							background: url('images/img1.3.jpg') no-repeat 0 0;
+							background: url('../images/img1.3.jpg') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: cover;
@@ -270,7 +291,7 @@
 
 						}
 						> .image-3 {
-							background: url('images/img1.2.jpg') no-repeat 0 0;
+							background: url('../images/img1.2.jpg') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: contain;
@@ -321,7 +342,7 @@
 						margin-top: 27px;
 						list-style: none;
 						padding-left: 34px;
-						background: url('images/correct-symbol.png') no-repeat 0 0;
+						background: url('../images/correct-symbol.png') no-repeat 0 0;
 
 						}
 
